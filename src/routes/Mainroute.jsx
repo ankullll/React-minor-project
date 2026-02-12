@@ -3,12 +3,14 @@ import Home from "../pages/Home"
 import About from "../pages/About"
 import Recipes from "../pages/Recipes"
 import Create from "../pages/Create"
+import SingleRecipe from "../pages/SingleRecipe"
 const Mainroute = () => {
   return (
    <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/about" element={<About />} />
     <Route path="/recipes" element={<Recipes />} />
+    <Route path="/recipes/details/:id" element={<SingleRecipe/>} />
     <Route path="/create-recipes" element={<Create />} />
    </Routes>
   )

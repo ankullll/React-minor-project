@@ -2,9 +2,12 @@ import { nanoid } from "nanoid";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { recipeContext } from "../context/RecipeContext";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Create = () => {
     const {recipe,setrecipe} = useContext(recipeContext)
+    const navigate = useNavigate()
      
   const {
     register,
@@ -16,7 +19,8 @@ const Create = () => {
     data.id = nanoid();
     setrecipe([...recipe,data])
    
-    
+    toast.success("New Recipe Added !")
+    navigate("/recipes")
     reset();
   };
    console.log(recipe)
@@ -36,6 +40,12 @@ const Create = () => {
         placeholder="Recipe Title"
         className="block p-2 border-b outline-0"
       />
+      <input
+        {...register("chef")}
+        type="text"
+        placeholder="Chef Name"
+        className="block p-2 border-b outline-0"
+      />
       {/* <small className="text-red-500 p-2">This is how the error is shown</small> */}
       <textarea
         {...register("description")}
@@ -51,20 +61,16 @@ const Create = () => {
         className="block p-2 border-b outline-0"
       />
       {/* <small className="text-red-500 p-2">This is how the error is shown</small> */}
-      <textarea
-        {...register("description")}
-        type="text"
-        placeholder="Write instruction  separated by comma "
-        className="block p-2 border-b outline-0"
-      />
+     
       <select
-        {...register("categories")}
+        {...register("category")}
         type="text"
         className="block p-2 border-b outline-0 bg-gray-800"
       >
-        <option value="cat-1">Category1</option>
-        <option value="cat-2">Category2</option>
-        <option value="cat-3">Category3 </option>
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="supper">Supper</option>
+        <option value="dinner">Dinner</option>
       </select>
       {/* <small className="text-red-500 p-2">This is how the error is shown</small> */}
       <button className="mt-5 block py-2 px-4  rounded bg-gray-900">
