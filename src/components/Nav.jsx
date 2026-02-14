@@ -12,6 +12,7 @@ const Nav = () => {
         <NavLink to="/recipes" className={(e)=>e.isActive ? "text-red-600 scale-105" : ""} >Recipes</NavLink>
         <NavLink to="/create-recipes" className={(e)=>e.isActive ? "text-red-600 scale-105" : ""} >Create Recipe</NavLink>
         <NavLink to="/about" className={(e)=>e.isActive ? "text-red-600 scale-105" : ""} >About</NavLink>
+        <NavLink to="/fav" className={(e)=>e.isActive ? "text-red-600 scale-105" : ""} >Favourites</NavLink>
       </div>
       
         

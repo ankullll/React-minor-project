@@ -16,7 +16,10 @@ const Create = () => {
   } = useForm();
   const submitHandler = (data) => {
     data.id = nanoid();
-    setrecipe([...recipe,data])
+    const copydata = [...recipe]
+    copydata.push(data)
+    setrecipe(copydata)
+    localStorage.setItem("recipes",JSON.stringify(copydata))
    
     toast.success("New Recipe Added !")
     navigate("/recipes")
