@@ -6,21 +6,23 @@ const RecipeContext = (props) => {
   const [recipe, setrecipe] = useState([
     {
       id: 1,
-      title: "Classic Margherita Pizza",
-      ingredients:"Pizza Dough , Tomatao sauce , Fresh mozzarella cheese,Fresh basil leaves,Olive oil"
-      ,
-      chef:"Ankul",
-      description:"Roll out the pizza dough and spread tomato sauce evenly Top with slices of fresh mozzarella and fresh basil leaves.",
+      title: "Sushi with cream",
+      ingredients:
+        "Pizza Dough , Tomatao sauce , Fresh mozzarella cheese,Fresh basil leaves,Olive oil",
+      chef: "Ankul",
+      description:
+        "Roll out the sushi dough and spread tomato sauce evenly Top with slices of fresh mozzarella and fresh basil leaves.",
       instructions: [
         "Preheat the oven to 475°F (245°C).",
-        "Roll out the pizza dough and spread tomato sauce evenly.",
+        "Roll out the sushi dough and spread tomato sauce evenly.",
         "Top with slices of fresh mozzarella and fresh basil leaves.",
         "Drizzle with olive oil and season with salt and pepper.",
         "Bake in the preheated oven for 12-15 minutes or until the crust is golden brown.",
         "Slice and serve hot.",
       ],
-      image: "https://cdn.dummyjson.com/recipe-images/1.webp",
-      category:"breakfast"
+      image:
+        "https://plus.unsplash.com/premium_photo-1668146927669-f2edf6e86f6f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      category: "breakfast",
     },
   ]);
   return (

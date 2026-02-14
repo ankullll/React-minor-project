@@ -5,7 +5,7 @@ const Recipecard = (props) => {
   return (
     <Link
       to={`/recipes/details/${id}`}
-      className="w-[17vw] rounded overflow-hidden  block mr-5 mb-5 hover:scale-101 duration-100"
+      className="w-[17vw] rounded overflow-hidden  block mr-5 mb-5 hover:scale-101 duration-100 ml-20 mt-5"
     >
       <img className="w-full h-[14vw] object-cover " src={image} alt="" />
       <h1 className="mt-2 font-black px-2 text-xl">{title}</h1>
