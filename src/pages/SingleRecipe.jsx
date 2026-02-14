@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 import { recipeContext } from "../context/RecipeContext";
 import { useForm } from "react-hook-form";
@@ -40,11 +40,19 @@ const SingleRecipe = () => {
   };
 
 
+   useEffect(()=>{
+      return ()=>{
+      }
+    },[])
+  
+
+
   return recipe ? (
     <div className="w-full flex">
       <div className="left  w-1/2 p-2">
         <h1 className="text-3xl font-black  ">{data.title}</h1>
         <img className="h-[30vh] mt-5" src={data.image} alt="" />
+        <h2 className="text-2xl font-black">{data.chef}</h2>
       </div>
       <form className="w-1/2 " onSubmit={handleSubmit(submitHandler)}>
         <input

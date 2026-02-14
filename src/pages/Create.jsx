@@ -13,7 +13,6 @@ const Create = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
   } = useForm();
   const submitHandler = (data) => {
     data.id = nanoid();
@@ -23,7 +22,7 @@ const Create = () => {
     navigate("/recipes")
     reset();
   };
-   console.log(recipe)
+   
  
   return (
     <form onSubmit={handleSubmit(submitHandler)}>

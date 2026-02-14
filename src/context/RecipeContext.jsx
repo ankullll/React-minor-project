@@ -20,7 +20,7 @@ const RecipeContext = (props) => {
         "Slice and serve hot.",
       ],
       image: "https://cdn.dummyjson.com/recipe-images/1.webp",
-      category:"Breakfast"
+      category:"breakfast"
     },
   ]);
   return (
