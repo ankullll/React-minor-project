@@ -11,7 +11,7 @@ const Fav = () => {
      
 })
   return (
-    <div className="flex flex-wrap">{ favdata?.length > 0 ? renderRecipe : "No Favourite Recipe found"}</div>
+    <div className="flex flex-wrap">{ favdata?.length > 0 ? renderRecipe : <h1 className="text-7xl text-[#be3740] text-center mt-35 ml-50">No Favourites Found !</h1> }</div>
     
   )
 }

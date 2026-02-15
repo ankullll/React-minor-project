@@ -4,11 +4,12 @@ export const recipeContext = createContext(null);
 
 const RecipeContext = (props) => {
   const [recipe, setrecipe] = useState([
-   
   ]);
 
   useEffect(()=>{
     setrecipe(JSON.parse(localStorage.getItem("recipes")) || [])
+    const a =JSON.parse(localStorage.getItem("recipes") || [])
+    console.log(a)
     
   },[])
   return (

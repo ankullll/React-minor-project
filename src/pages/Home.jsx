@@ -48,7 +48,7 @@ const Home = () => {
         <button onClick={order} className="text-[#FEEFDF] bg-[#BC3740] px-3 py-2 rounded ml-16 mt-5 hover:scale-105">See More</button>
       </div>
 
-      <div className="right bg-[#BC3740] h-full w-[33vw] rounded-[50%] ml-15 relative">
+      <div className="right bg-[#BC3740] h-full w-[33vw] aspect-square rounded-full ml-15 relative">
         <img
           src="/assets/home-img-1.png"
           alt=""
